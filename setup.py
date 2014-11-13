@@ -4,14 +4,14 @@
 import os
 import sys
 
-import publica_pages
+import pages
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-version = publica_pages.__version__
+version = pages.__version__
 
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
@@ -32,7 +32,7 @@ setup(
     author_email='gamaliel@commoncode.com.au',
     url='https://github.com/publica-io/django-publica-pages',
     packages=[
-        'publica_pages',
+        'pages',
     ],
     include_package_data=True,
     install_requires=[
