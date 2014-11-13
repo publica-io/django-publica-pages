@@ -4,17 +4,26 @@ from django.db import models
 
 from entropy.base import (
     SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin,
-    PublishingStatusMixin, AttributeMixin
+    AttributeMixin, EnabledMixin
 )
-from entropy.fields import EnabledField
 
 
-class Page(SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin,
-           PublishingStatusMixin, AttributeMixin):
+class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
+           ModifiedMixin, AttributeMixin):
 
-    enabled = EnabledField()
+    # title
+    # short_title
+    # slug
+    # enabled
+    # text
+    # created_at
+    # created_by
+    # modified_at
+    # modified_by
+    # attributes
+
     featured = models.BooleanField(default=False)
-    published_date = models.DateField(null=True)
+    published_at = models.DateField(null=True)
 
     def get_absolute_url(self):
         """
