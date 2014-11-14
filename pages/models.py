@@ -6,10 +6,11 @@ from entropy.base import (
     SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin,
     AttributeMixin, EnabledMixin
 )
+from templates.mixins import TemplateMixin
 
 
 class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
-           ModifiedMixin, AttributeMixin):
+           ModifiedMixin, AttributeMixin, TemplateMixin):
 
     # title
     # short_title
