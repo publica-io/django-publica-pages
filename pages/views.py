@@ -3,7 +3,7 @@ from django.views.generic import DetailView, ListView
 
 try:
     # Only import from platforms if it is a dependancy
-    from publica_platforms import views as platforms_views
+    from platforms import views as platforms_views
 
     # Use platform mixin if platforms is found as a dependancy
     PlatformListMixin = platforms_views.PlatformListMixin

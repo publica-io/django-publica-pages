@@ -8,3 +8,8 @@ flake8>=2.1.0
 tox>=1.7.0
 
 # Additional test requirements go here
+
+
+-e git://github.com/publica-io/django-entropy.git#egg=entropy
+-e git://github.com/publica-io/django-publica-templates.git#egg=templates
+-e git://github.com/publica-io/django-publica-menus.git#egg=menus
