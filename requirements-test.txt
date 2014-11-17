@@ -9,6 +9,7 @@ tox>=1.7.0
 
 # Additional test requirements go here
 
+factory_boy
 
 -e git://github.com/publica-io/django-entropy.git#egg=entropy
 -e git://github.com/publica-io/django-publica-templates.git#egg=templates
