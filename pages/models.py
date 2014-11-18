@@ -3,14 +3,13 @@ from django.core.urlresolvers import reverse
 from django.db import models
 
 from entropy.base import (
-    SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin,
-    AttributeMixin, EnabledMixin
+    SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin, EnabledMixin
 )
 from templates.mixins import TemplateMixin
 
 
 class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
-           ModifiedMixin, AttributeMixin, TemplateMixin):
+           ModifiedMixin, TemplateMixin):
 
     # title
     # short_title
