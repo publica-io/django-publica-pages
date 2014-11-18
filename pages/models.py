@@ -31,7 +31,7 @@ class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
 
         """
 
-        return reverse('pages_detail_page', args=(self.slug, ))
+        return reverse('pages_page', args=(self.slug, ))
 
     @staticmethod
     def get_list_url():
@@ -41,4 +41,5 @@ class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
 
         """
 
-        return reverse('pages_all_pages')
+        return reverse('pages_pages')
+
