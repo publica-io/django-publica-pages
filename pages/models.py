@@ -2,7 +2,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 
-from entropy.base import (
+from entropy.mixins import (
     SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin, EnabledMixin
 )
 from templates.mixins import TemplateMixin
