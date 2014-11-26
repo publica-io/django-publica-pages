@@ -5,41 +5,21 @@ from django.db import models
 from entropy.mixins import (
     SlugMixin, TitleMixin, TextMixin, ModifiedMixin, CreatedMixin, EnabledMixin
 )
+from images.mixins import ImageMixin
 from templates.mixins import TemplateMixin
 
 
-class Page(TitleMixin, SlugMixin, EnabledMixin, TextMixin, CreatedMixin,
-           ModifiedMixin, TemplateMixin):
+class Page(TitleMixin, SlugMixin, ImageMixin, EnabledMixin, TextMixin, TemplateMixin):
 
     # title
     # short_title
     # slug
     # enabled
     # text
-    # created_at
-    # created_by
-    # modified_at
-    # modified_by
-    # attributes
-
-    featured = models.BooleanField(default=False)
-    published_at = models.DateField(null=True)
 
     def get_absolute_url(self):
-        """
-        Returns the absolute url for a single page instance
-
-        """
-
         return reverse('pages_page', args=(self.slug, ))
 
     @staticmethod
     def get_list_url():
-        """
-        Returns the absolute url for all page objects.
-        This is a static method.
-
-        """
-
         return reverse('pages_pages')
-
