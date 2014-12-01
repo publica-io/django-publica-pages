@@ -8,8 +8,13 @@ from entropy.mixins import (
 from images.mixins import ImageMixin
 from templates.mixins import TemplateMixin
 
+try:
+    from publica_admin.mixins import PublicaAdminMixin
+except ImportError:
+    PublicaAdminMixin = object
 
-class Page(TitleMixin, SlugUniqueMixin, ImageMixin, EnabledMixin, TextMixin, TemplateMixin):
+
+class Page(TitleMixin, SlugUniqueMixin, ImageMixin, EnabledMixin, TextMixin, TemplateMixin, PublicaAdminMixin):
 
     # title
     # short_title
