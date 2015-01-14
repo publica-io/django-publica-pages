@@ -24,7 +24,7 @@ class Page(TitleMixin, SlugUniqueMixin, ImageMixin, EnabledMixin, TextMixin, Tem
 
     class Meta:
         verbose_name = 'Content Page'
-        verbose_name_plural = 'Content Pages with Page Content Views'
+        verbose_name_plural = 'Page Content'
 
     def get_absolute_url(self):
         return reverse('pages_page', args=(self.slug, ))
